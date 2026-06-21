@@ -186,14 +186,16 @@ const Index = () => {
               </li>
               <li className="flex items-center gap-4">
                 <Icon name="Phone" size={24} className="text-accent" />
-                <span>Телефон уточняется</span>
+                <a href="tel:+79180005333" className="hover:text-accent transition-colors">+7 (918) 000-53-33</a>
               </li>
               <li className="flex items-center gap-4">
                 <Icon name="Clock" size={24} className="text-accent" />
                 <span>Приём гостей — круглосуточно</span>
               </li>
             </ul>
-            <Button size="lg" variant="secondary" className="mt-8">Позвонить и забронировать</Button>
+            <Button size="lg" variant="secondary" className="mt-8" asChild>
+              <a href="tel:+79180005333">Позвонить и забронировать</a>
+            </Button>
           </div>
           <div className="rounded-2xl overflow-hidden border-4 border-accent/40 shadow-lg h-80">
             <iframe
