@@ -4,33 +4,33 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 40 38% 96%;
+    --foreground: 28 30% 16%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 42 44% 98%;
+    --card-foreground: 28 30% 16%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 42 44% 98%;
+    --popover-foreground: 28 30% 16%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 22 55% 34%;
+    --primary-foreground: 40 40% 97%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 92 22% 42%;
+    --secondary-foreground: 40 40% 97%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 40 28% 90%;
+    --muted-foreground: 28 18% 40%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 38 65% 52%;
+    --accent-foreground: 28 40% 14%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 72% 45%;
+    --destructive-foreground: 40 40% 97%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 34 26% 82%;
+    --input: 34 26% 82%;
+    --ring: 22 55% 34%;
 
     --radius: 0.5rem;
 
@@ -96,6 +96,24 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
   }
+}
+
+.slavic-border {
+  background-image: repeating-linear-gradient(
+    45deg,
+    hsl(var(--accent)) 0 8px,
+    hsl(var(--primary)) 8px 16px,
+    hsl(var(--secondary)) 16px 24px
+  );
+}
+
+.texture-paper {
+  background-color: hsl(var(--background));
+  background-image: radial-gradient(
+    hsl(var(--border) / 0.4) 1px,
+    transparent 1px
+  );
+  background-size: 18px 18px;
 }
